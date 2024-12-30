@@ -1,9 +1,13 @@
 <script setup lang="ts">
-import TheWelcome from '../components/organisms/TheWelcome.vue'
+import { Calendar } from 'v-calendar';
+
+const onDayClick = (day: Date) => {
+  window.location.href = 'https://github.com';
+};
 </script>
 
 <template>
   <main>
-    <TheWelcome />
+    <Calendar expanded @dayclick="onDayClick" />
   </main>
 </template>
